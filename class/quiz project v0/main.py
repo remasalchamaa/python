@@ -1,5 +1,6 @@
 from data import question_bank
 
+
 score = 0 
 for i, question in enumerate(question_bank):
     answer = input(f"Q:{i+1}/{len(question_bank)}: {question['question']} (True/False):")
