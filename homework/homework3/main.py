@@ -1,19 +1,16 @@
-# Homework 2.1 - Conditionals
+# Homework 3.1 - Loops and Lists
+
+# Task 1: Sum List
+all_numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
 
-# Task 1: Date Validator
+# Task 2: RSVP Names
 
 
-# Task 2: Water State Determiner
+# Task 3: Print If Greater Than 100
 
 
-# Task 3: Print True
-A = False
-B = False
-C = False
-D = False
+# Task 4: How Many Handshakes?
 
-if (A or B) and (C or D) and not (A and not D):
-  print("Boolean expression is True!")
-else:
-  print("Boolean expression is False.")
+# Task 5: Find All The 'E's!
+
