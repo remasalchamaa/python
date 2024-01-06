@@ -6,27 +6,27 @@ diam_width = 7
 symb = '*'
 
 
-def head_foot(width, rep, symb):
-    for i in range(1,width,2):
-        line = " "*((width-i)//2) + f"{symb}"*i + " "* ((width-i)//2)
+def head_foot(diam_width, rep, symb):
+    for i in range(1,diam_width,2):
+        line = " "*((diam_width-i)//2) + f"{symb}"*i + " "* ((diam_width-i)//2)
         print(line*rep)
         time.sleep(0.5)
 
-    for i in range(width,0,-2):
-        line = " "*((width-i)//2) + f"{symb}"*i + " "* ((width-i)//2)
+    for i in range(diam_width,0,-2):
+        line = " "*((diam_width-i)//2) + f"{symb}"*i + " "* ((diam_width-i)//2)
         print(line*rep)
         time.sleep(0.5)
 
-def body(width, rep, symb):
-    for i in range(1,width,2):
-        line = " "*((width-i)//2) + f"{symb}"*i + " "* ((width-i)//2)
-        line2 = " " * width * (rep-2)
+def body(diam_width, rep, symb):
+    for i in range(1,diam_width,2):
+        line = " "*((diam_width-i)//2) + f"{symb}"*i + " "* ((diam_width-i)//2)
+        line2 = " " * diam_width * (rep-2)
         print(line + line2 + line)
         time.sleep(0.5)
 
-    for i in range(width,0,-2):
-        line = " "*((width-i)//2) + f"{symb}"*i + " "* ((width-i)//2)
-        line2 = " " * width * (rep-2)
+    for i in range(diam_width,0,-2):
+        line = " "*((diam_width-i)//2) + f"{symb}"*i + " "* ((diam_width-i)//2)
+        line2 = " " * diam_width * (rep-2)
         print(line + line2 + line)
         time.sleep(0.5)
     
