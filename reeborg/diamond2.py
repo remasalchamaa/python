@@ -1,31 +1,40 @@
-rec_height = 6
-rec_width = 4
+import time
+
+rec_width = 7
+rec_height = 4
 diam_width = 7
 symb = '*'
 
-def h_f(diam_width, symb, rec_width):
-    for i in range(1, diam_width, 2):
-        line = " "*((diam_width - i)//2) + f"{symb}"*(i) + " "*((diam_width - i)//2)
-        print(line*rec_width)
 
-    for i in range(diam_width, 0, -2):
-        line = " "*((diam_width - i)//2) + f"{symb}"*(i) + " "*((diam_width - i)//2)
-        print(line*rec_width)
+def head_foot(width, rep, symb):
+    for i in range(1,width,2):
+        line = " "*((width-i)//2) + f"{symb}"*i + " "* ((width-i)//2)
+        print(line*rep)
+        time.sleep(0.5)
 
-def body(diam_width, symb, rec_width):
-    for i in range(1, diam_width, 2):
-        line = " "*((diam_width - i)//2) + f"{symb}"*(i) + " "*((diam_width - i)//2)
-        line2 = " "*diam_width*(rec_width-2)
-        print(line+line2+line)
+    for i in range(width,0,-2):
+        line = " "*((width-i)//2) + f"{symb}"*i + " "* ((width-i)//2)
+        print(line*rep)
+        time.sleep(0.5)
 
-    for i in range(diam_width, 0, -2):
-        line = " "*((diam_width - i)//2) + f"{symb}"*(i) + " "*((diam_width - i)//2)
-        line2 = " "*diam_width*(rec_width-2)
-        print(line+line2+line)
+def body(width, rep, symb):
+    for i in range(1,width,2):
+        line = " "*((width-i)//2) + f"{symb}"*i + " "* ((width-i)//2)
+        line2 = " " * width * (rep-2)
+        print(line + line2 + line)
+        time.sleep(0.5)
 
+    for i in range(width,0,-2):
+        line = " "*((width-i)//2) + f"{symb}"*i + " "* ((width-i)//2)
+        line2 = " " * width * (rep-2)
+        print(line + line2 + line)
+        time.sleep(0.5)
+    
 
-
-h_f(diam_width, symb, rec_width)
-for i in range(rec_height-2):
-    body(diam_width, symb, rec_width)
-h_f(diam_width, symb, rec_width)
+#generate header
+head_foot(diam_width, rec_width, symb)
+#generate body
+for i in range(rec_height - 2):
+    body(diam_width, rec_width, symb)
+#generate footer
+head_foot(diam_width, rec_width, symb)
